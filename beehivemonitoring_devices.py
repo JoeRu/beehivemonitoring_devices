@@ -1,7 +1,7 @@
 
 #######################
 # example data procured by a https://docs.openmqttgateway.com/ BLE device.
-#HiveHeart : 04:cd:15:6f:fd:7d
+#HiveHeart : 04:cd:15:6f:fd:7d # mac-adress
 #HiveScale : ec:1b:bd:1c:55:40
 # EC1BBD1C5540
 #HiveGateway: 7c:d1:c3:34:8f:e2

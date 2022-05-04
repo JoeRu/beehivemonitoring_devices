@@ -1,0 +1,15 @@
+version: "3.3"
+services:
+  bluezqt:
+    build: .
+    restart: always
+    dns_search: lan
+    volumes:
+      - "/etc/localtime:/etc/localtime:ro"
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/opt/openhab2/framepi:/export"
+    environment:
+     TZ: "Europe/Berlin"
+     MQTT_SERVER: '192.168.176.6'
+     MQTT_PORT: 1883
+     LOG_LEVEL: 'INFO' #'DEBUG' #INFO # ERROR
