@@ -17,7 +17,7 @@ The **beehivemonitoring_devices.py** is the simple test-code to adapt the reengi
 
 When receiving a scale, or a hiveheart for the first time - you receive a paper with a QR Code to get your Data on your mobile device. This contains also a ---**accesskey**--- looking like the following
 
-_f0086705921e4013b9c9f5fffffffff_
+**_f0086705921e4013b9c9f5fffffffff_**
 
 This will lead in combinations to your Computer accessible data-homepage
 https://main.beehivemonitoring.com/---accesskey---
@@ -25,14 +25,14 @@ https://main.beehivemonitoring.com/---accesskey---
 While debugging the website with developer-tools i figured that the following url is delivering your data as plain json format.
 ![Developer-Tools - traffic - just refresh site](browser_1.png)
 
-The **$hivenumber** seems to be numbered straight - ahead and is not attached to the documentation.
-So you need to figure this by debugging your browser.
+The **$hivenumber** is the **ID** - which is also documented on the page you received by beehivemonitoring.com. 
 
-The **$timeback_limit** will take historic data - for a regular basis you just need to grab 6 to 12 lines. More will just repeat the data.
 
-The attributes is the list of data to be received. I didn't change it.
+The **$timeback_limit** will take historic data - for a regular basis you just need to grab 1 to 3 lines - depending on the devices you attached to the hive-id (hiveheart and so on). More limits will just receive the historic data - which may also be usefull to get historic data.
 
-Example Url - check for $hivenumber and $timeback_limit for adaptions:
+The attributes is the list of data to be received. I didn't change the default.
+
+Example Url - check for **$hivenumber** and **$timeback_limit** for adaptions - also check for the "x-auth-token": "your_accesskey" which needed to be set in the header.
 
 https://main.beehivemonitoring.com/api/hives/$hivenumber/history?limit=$timeback_limit&reverse=true&attributes=inCounts;outCounts;inCounts;outCounts;inCounts;outCounts;inCounts;outCounts;inCounts;outCounts;inCounts;outCounts;inCounts;outCounts;inCounts;outCounts;inCounts;outCounts;inCounts;outCounts;inCounts;outCounts;inCounts;outCounts;tempIn;tempOut;tempC;tempEnv;humidityIn;humidityOut;humidityC;humidityEnv;weight;;pressure;pressureC;pressureGw;pressureEnv;frequency;amplitude;vbatIn;vbatOut;vbatEnv;vbatGw;rssiIn;rssiOut;rssiEnv;rssiGw;inTotal;outTotal;co2;tvoc;co;o2;o3;so;pm25;pm10;magX;magY;magZ;accX;accY;accZ
 
