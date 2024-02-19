@@ -11,7 +11,7 @@ from datetime import datetime
 #from influxdb import InfluxDBClient
 
 
-# influx_client = InfluxDBClient('192.168.176.6', 8086, 'openhab', 'DID23joe', 'openhab_db')
+# influx_client = InfluxDBClient('', 8086, 'openhab', '', 'openhab_db')
 # influx_client.switch_database('openhab')
 
 #         ex_payload = json.dumps(values)        
